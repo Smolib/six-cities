@@ -1,11 +1,11 @@
 import { useAppDispatch, useAppSelector } from '../../hooks';
-import { changeTypeOfSorting, sortOffers } from '../../store/action';
+import { changeTypeOfSorting, sortOffers } from '../../store/offers-data/offers-data';
 import { SortInfo } from '../../consts';
 import { useState } from 'react';
 import { SortData } from '../../types/sort-data';
 
 function SortingForm(): JSX.Element {
-  const typeOfSorting = useAppSelector((state) => state.typeOfSorting);
+  const typeOfSorting = useAppSelector((state) => state.OFFERS.typeOfSorting);
 
   const dispatch = useAppDispatch();
 

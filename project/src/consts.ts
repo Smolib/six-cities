@@ -92,3 +92,9 @@ export const Mounths = [
   'December',
 ];
 
+export enum NameSpace {
+  Api = 'API',
+  User = 'USER',
+  Offers = 'OFFERS',
+  Offer = 'OFFER',
+}

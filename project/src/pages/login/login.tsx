@@ -3,10 +3,10 @@ import { useAppDispatch } from '../../hooks';
 import { loginAction } from '../../store/api-actions';
 import { AuthData } from '../../types/auth-data';
 import { getRandomCities } from '../../utils/random-cities';
-import { changeActiveCity, redirectToRoute } from '../../store/action';
 import { AppRoute } from '../../consts';
 import { Link } from 'react-router-dom';
-import { getOffersFromCity } from '../../store/action';
+import { redirectToRoute } from '../../store/action';
+import { changeActiveCity, getOffersFromCity } from '../../store/offers-data/offers-data';
 
 type LoginProps = {
   isLogged: boolean;

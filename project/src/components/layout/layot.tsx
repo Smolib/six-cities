@@ -1,7 +1,7 @@
 import { Outlet, useLocation } from 'react-router-dom';
 import Header from '../header/header';
 import { AppRoute, StylesOfPage } from '../../consts';
-import { setServerError } from '../../store/action';
+import { setServerError } from '../../store/api-statuses/api-statiuses';
 import { useAppDispatch, useAppSelector } from '../../hooks';
 import { useEffect } from 'react';
 
@@ -12,7 +12,7 @@ type LayoutProps = {
 function Layout({ isLogged }: LayoutProps): JSX.Element {
   const { pathname } = useLocation();
   const dispatch = useAppDispatch();
-  const isServeerError = useAppSelector((state) => state.isServerError);
+  const isServeerError = useAppSelector((state) => state.API.isServerError);
   useEffect(() => {
     let timer: NodeJS.Timeout;
     if (isServeerError) {

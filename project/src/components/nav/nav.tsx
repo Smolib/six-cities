@@ -8,7 +8,7 @@ type NavProps = {
 };
 
 function Nav({ isLogged }: NavProps): JSX.Element {
-  const userData = useAppSelector((state) => state.userData);
+  const userData = useAppSelector((state) => state.USER.userData);
 
   const dispatch = useAppDispatch();
   return (

@@ -14,9 +14,9 @@ import LoadSpinner from '../load-spinner/load-spinner';
 
 function App(): JSX.Element {
   const authorizationStatus = useAppSelector(
-    (state) => state.authorizationStatus
+    (state) => state.USER.authorizationStatus
   );
-  const isOffersLoad = useAppSelector((state) => state.isOffersLoad);
+  const isOffersLoad = useAppSelector((state) => state.API.isOffersLoad);
   const [isLogged, setIsLogged] = useState(false);
 
   useEffect(() => {

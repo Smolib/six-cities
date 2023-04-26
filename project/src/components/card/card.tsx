@@ -1,7 +1,7 @@
 import { Offer } from '../../types/offer';
 import { Link } from 'react-router-dom';
 import { useAppDispatch } from '../../hooks';
-import { changeActiveCard } from '../../store/action';
+import { changeActiveCard } from '../../store/offers-data/offers-data';
 import { getRating } from '../../utils/rating';
 
 type CardProps = {

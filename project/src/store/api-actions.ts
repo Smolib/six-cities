@@ -2,23 +2,16 @@ import { AxiosInstance } from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { AppDispatch, State } from '../types/state';
 import { Offer } from '../types/offer';
-import {
-  loadOffers,
-  loadOffer,
-  redirectToRoute,
-  requireAuthorization,
-  setUserData,
-  setTrueLoadOfferStatus,
-  loadNearByOffer,
-  loadComments,
-  changeFormData,
-  setServerError,
-} from './action';
 import { APIRoute, AppRoute, AuthorizationStatus } from '../consts';
 import { AuthData } from '../types/auth-data';
 import { UserData } from '../types/user-data';
 import { dropToken, saveToken } from '../utils/token';
 import { Comment } from '../types/comment';
+import { loadOffers } from './offers-data/offers-data';
+import { setServerError, setTrueLoadOfferStatus } from './api-statuses/api-statiuses';
+import { changeFormData, loadComments, loadNearByOffer, loadOffer } from './offer-data/offer-data';
+import { redirectToRoute } from './action';
+import { requireAuthorization, setUserData } from './user-data/user-data';
 
 export const fetchOffersAction = createAsyncThunk<
   void,

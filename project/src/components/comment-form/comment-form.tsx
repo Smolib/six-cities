@@ -2,14 +2,14 @@ import { ChangeEvent } from 'react';
 import { useAppDispatch, useAppSelector } from '../../hooks';
 import { postComment } from '../../store/api-actions';
 import { InputsSetting } from '../../consts';
-import { changeFormData } from '../../store/action';
+import { changeFormData } from '../../store/offer-data/offer-data';
 
 type CommentFormProps = {
   idOfOffer: number;
 };
 function CommentForm({ idOfOffer }: CommentFormProps): JSX.Element {
   const dispatch = useAppDispatch();
-  const { comment, rating, isValid, isDisabled, isErrorActive } = useAppSelector((state) => state.formData);
+  const { comment, rating, isValid, isDisabled, isErrorActive } = useAppSelector((state) => state.OFFER.formData);
   const onChangeText = (evt: ChangeEvent<HTMLTextAreaElement>) => {
     dispatch(changeFormData({ comment: evt.target.value }));
   };

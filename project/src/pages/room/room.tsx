@@ -7,9 +7,9 @@ import { fetchOfferAction } from '../../store/api-actions';
 import { store } from '../../store';
 import { useAppDispatch, useAppSelector } from '../../hooks';
 import { useEffect } from 'react';
-import { clearOffer } from '../../store/action';
 import LoadSpinner from '../../components/load-spinner/load-spinner';
 import { getRating } from '../../utils/rating';
+import { clearOffer } from '../../store/offer-data/offer-data';
 
 type RoomProps = {
   isLogged: boolean;
@@ -26,10 +26,10 @@ function Room({ isLogged }: RoomProps): JSX.Element {
     };
   }, [dispatch, params]);
 
-  const offer = useAppSelector((state) => state.activeOffer);
-  const offersNearByOffer = useAppSelector((state) => state.nearByOffer);
-  const comments = useAppSelector((state) => state.comments);
-  const isOfferLoad = useAppSelector((state) => state.isOfferLoad);
+  const offer = useAppSelector((state) => state.OFFER.activeOffer);
+  const offersNearByOffer = useAppSelector((state) => state.OFFER.nearByOffer);
+  const comments = useAppSelector((state) => state.OFFER.comments);
+  const isOfferLoad = useAppSelector((state) => state.API.isOfferLoad);
 
   if (!isOfferLoad) {
     return <LoadSpinner />;

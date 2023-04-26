@@ -1,15 +1,15 @@
 import Map from '../../components/map/map';
 import OffersMainSection from '../../components/offers-main-section/offers-main-section';
 import { useAppDispatch, useAppSelector } from '../../hooks';
-import { changeActiveCity, getOffersFromCity } from '../../store/action';
 import { CITIES } from '../../consts';
 import CitiesNav from '../../components/cities-nav/cities-nav';
 import { memo } from 'react';
 import EmptyOffersSection from '../../components/empty-offers-section/empty-offers-section';
+import { changeActiveCity, getOffersFromCity } from '../../store/offers-data/offers-data';
 
 function Main(): JSX.Element {
-  const currentCity = useAppSelector((state) => state.currentCity);
-  const currentOffers = useAppSelector((state) => state.currentOffers);
+  const currentCity = useAppSelector((state) => state.OFFERS.currentCity);
+  const currentOffers = useAppSelector((state) => state.OFFERS.currentOffers);
 
   const dispatch = useAppDispatch();
 

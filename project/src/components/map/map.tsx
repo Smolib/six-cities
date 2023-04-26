@@ -20,7 +20,7 @@ function Map({
   cssClassOfMap,
   mainOffer,
 }: MapProps): JSX.Element {
-  const selectedOffer = useAppSelector((state) => state.activeCard);
+  const selectedOffer = useAppSelector((state) => state.OFFERS.activeCard);
   const mapRef = useRef(null);
   const map = useMap(mapRef, city);
 
