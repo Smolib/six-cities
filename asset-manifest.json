@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Smolib/six-cities/static/css/main.a189e101.css",
+    "main.js": "/Smolib/six-cities/static/js/main.3025eb16.js",
+    "index.html": "/Smolib/six-cities/index.html",
+    "main.a189e101.css.map": "/Smolib/six-cities/static/css/main.a189e101.css.map",
+    "main.3025eb16.js.map": "/Smolib/six-cities/static/js/main.3025eb16.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a189e101.css",
+    "static/js/main.3025eb16.js"
+  ]
+}
