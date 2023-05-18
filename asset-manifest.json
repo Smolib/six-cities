@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/six-cities/static/css/main.a189e101.css",
-    "main.js": "/six-cities/static/js/main.d5e093f4.js",
-    "index.html": "/six-cities/index.html",
-    "main.a189e101.css.map": "/six-cities/static/css/main.a189e101.css.map",
-    "main.d5e093f4.js.map": "/six-cities/static/js/main.d5e093f4.js.map"
+    "main.css": "/static/css/main.a189e101.css",
+    "main.js": "/static/js/main.3025eb16.js",
+    "index.html": "/index.html",
+    "main.a189e101.css.map": "/static/css/main.a189e101.css.map",
+    "main.3025eb16.js.map": "/static/js/main.3025eb16.js.map"
   },
   "entrypoints": [
     "static/css/main.a189e101.css",
-    "static/js/main.d5e093f4.js"
+    "static/js/main.3025eb16.js"
   ]
 }
